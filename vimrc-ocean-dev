@@ -19,7 +19,7 @@ endif
 set nocompatible
 filetype off
 
-call vundle#rc()
+execute pathogen#infect()
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
