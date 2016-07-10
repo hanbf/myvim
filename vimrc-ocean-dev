@@ -160,3 +160,7 @@ let g:syntastic_javascript_fecs_args = "--reporter=baidu"
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 " FECS stuff ends
+
+" NERDTree """"
+map <leader>f :NERDTreeFind<cr>
+" NERDTree ends """"
