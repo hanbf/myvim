@@ -6,7 +6,7 @@
 	url = https://github.com/scrooloose/nerdtree.git
 [submodule "basic/bundle/Vundle.vim"]
 	path = basic/bundle/Vundle.vim
-	url = https://github.com/VundleVim/Vundle.vim.git
+	url = https://github.com/VundleVim/Vundle.vim
 [submodule "basic/bundle/syntastic"]
 	path = basic/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
