@@ -10,3 +10,15 @@
 [submodule "basic/bundle/syntastic"]
 	path = basic/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "basic/bundle/fecs.vim"]
+	path = basic/bundle/fecs.vim
+	url = https://github.com/hushicai/fecs.vim
+[submodule "basic/bundle/genutils"]
+	path = basic/bundle/genutils
+	url = https://github.com/vim-scripts/genutils
+[submodule "basic/bundle/lookupfile"]
+	path = basic/bundle/lookupfile
+	url = https://github.com/vim-scripts/lookupfile
+[submodule "basic/bundle/supertab"]
+	path = basic/bundle/supertab
+	url = https://github.com/ervandew/supertab
