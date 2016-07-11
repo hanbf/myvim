@@ -43,10 +43,12 @@ Plugin 'ervandew/supertab.git'
 
 " genutils
 Plugin 'vim-scripts/genutils'
+
 " lookupfile
 Plugin 'vim-scripts/lookupfile'
 
-
+" ack
+Plugin 'mileszs/ack.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -191,4 +193,11 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 " Make path PWD and beneath, make :find useful
 set path=$PWD/**
 map <leader>f :LUPath<cr>
+
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
+
 " Find ends """"
+
+
