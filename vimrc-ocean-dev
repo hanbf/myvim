@@ -21,6 +21,46 @@ filetype off
 
 execute pathogen#infect()
 
+""" Vundle stuff """
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" FECS
+Plugin 'hushicai/fecs.vim.git'
+
+" supertab
+Plugin 'ervandew/supertab.git'
+
+" genutils
+Plugin 'vim-scripts/genutils'
+" lookupfile
+Plugin 'vim-scripts/lookupfile'
+
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+""" Vundle stuff ends """
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -115,3 +155,36 @@ set expandtab
 " set encoding
 set encoding=utf8
 
+" FECS stuff
+" 不建议首次打开文件时进行检查
+let g:syntastic_check_on_open = 0
+" `:wq`时不进行检查，注意这跟`:w`不一样
+let g:syntastic_check_on_wq = 0
+" 如果你想在写文件时不进行检查，需要配置`passive`模式
+" 在`passive`模式下，只有手动调用了`:SyntasticCheck`才会触发检查
+" let g:syntastic_mode_map = {'mode': 'passive'} 
+" 你可以配置一个快捷方式，用来快速检查当前文件
+" nmap <silent> <F5> :SyntasticCheck<cr>
+let g:syntastic_javascript_checkers = ['fecs']
+let g:syntastic_javascript_fecs_args = "--reporter=baidu"
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+" FECS stuff ends
+
+" NERDTree """"
+map <leader>r :NERDTreeFind<cr>
+" NERDTree ends """"
+
+" completion """"
+set omnifunc=syntaxcomplete#Complete
+
+" supertab
+let g:SuperTabRetainCompletionType = 2
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>" 
+" completion ends """"
+
+" Find """"
+" Make path PWD and beneath, make :find useful
+set path=$PWD/**
+map <leader>f :LUPath<cr>
+" Find ends """"
